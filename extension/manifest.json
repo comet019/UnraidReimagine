@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Unraid Reimagine",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/Dashboard"
+      ],
+      "js": ["style.js"],    
+      "all_frames": false,
+      "match_origin_as_fallback": false,
+      "match_about_blank": false,
+      "run_at": "document_idle",
+      "world": "ISOLATED"
+    }
+  ]
+}
